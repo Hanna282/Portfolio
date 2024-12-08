@@ -9,12 +9,248 @@
 
     <link rel="stylesheet" href="style.css">
 
+        <!-- BoxIcons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
     
+    <header class="header-home" id="home">
+
+        <h4 class="header-logo">Utvecklare Hanna M</h4>
+
+        <nav>
+            <ul class="header-menu">
+                <li><a class="header-menu-item" href="#home">Hem</a></li>
+                <li><a class="header-menu-item" href="#about">Om mig</a></li>
+                <li><a class="header-menu-item" href="#portfolio">Portfolio</a></li>
+                <li><a class="header-menu-item" href="#reference">Referenser</a></li>
+                <li><a class="header-menu-item" href="#contact">Kontakta mig</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-hamburger">
+            <!-- När man klickar på labeln/ikonen blir checkboxen markerad -->
+            <input type="checkbox" id="check">
+
+            <label for="check" class="checkbtn">
+                <i class='bx bx-menu'></i>
+            </label>
+
+            <ul class="header-menu-mini">
+                <li><a class="header-menu-item" href="#home">Hem</a></li>
+                <li><a class="header-menu-item" href="#about">Om mig</a></li>
+                <li><a class="header-menu-item" href="#portfolio">Portfolio</a></li>
+                <li><a class="header-menu-item" href="#reference">Referenser</a></li>
+                <li><a class="header-menu-item" href="#contact">Kontakta mig</a></li>
+            </ul>
+        </div>
+
+    </header>
 
 
+    <main>
+
+        <!-- OM MIG -->
+        <section class="about" id="about"> 
+
+            <h1>Hanna Mickels</h1>
+
+            <article class="about-me">
+
+                <div class="about-me-information">
+                    <p>Om mig...........
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, error earum? 
+                        Eaque praesentium sunt quibusdam molestiae, aliquam debitis voluptatum soluta maiores, 
+                        minima sapiente perferendis ipsa non nisi, totam veritatis optio.
+                    </p>
+    
+                    <!-- KNAPP - ladda ner CV -->
+                    <a class="download-button" href="#">Hämta mitt CV</a>
+                </div>
+
+                <div class="about-me-portrait" >
+                    <img src="" alt="">
+                </div>
+
+            </article>
+        </section>
+
+         <!-- KUNSKAP -->
+         <section class="skills"> 
+
+            <h2>Färdigheter</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolorum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus voluptates dicta illum eum! 
+                Nobis omnis ipsa sapiente et perspiciatis culpa, sed harum aperiam. Doloremque.</p>
+            
+        </section>
+
+        <!-- PORTFÖLJ -->
+        <section class="portfolio" id="porfolio">
+
+            <h2>Portfölj</h2>
+
+            <!-- Projekt 1 -->
+            <article>
+
+                <h3>Projekt 1</h3>
+
+                <!-- Ändra till rätt länk Github -->
+                <a href="https://www.google.se/" target="_blank">
+                    <img src="" alt="">
+                </a>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
+                    architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
+
+            </article>
+
+            <!-- Projekt 2 -->
+            <article>
+
+                <h3>Projekt 2</h3>
+
+                <!-- Ändra till rätt länk Github -->
+                <a href="https://www.google.se/" target="_blank">
+                    <img src="" alt="">
+                </a>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
+                    architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
+                
+            </article>
+
+        
+            <!-- Projekt 3 -->
+            <article>
+
+                <h3>Projekt 3</h3>
+
+                <!-- Ändra till rätt länk Github -->
+                <a href="https://www.google.se/" target="_blank">
+                    <img src="" alt="">
+                </a>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
+                    architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
+                
+            </article>
+    
+        
+            <!-- Projekt 4 -->
+            <article>
+
+                <h3>Projekt 4</h3>
+
+                <!-- Ändra till rätt länk Github -->
+                <a href="https://www.google.se/" target="_blank">
+                    <img src="" alt="">
+                </a>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
+                    architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
+                
+            </article>
+
+            <!-- Projekt 5 -->
+            <article>
+
+                <h3>Projekt 5</h3>
+
+                <!-- Ändra till rätt länk Github -->
+                <a href="https://www.google.se/" target="_blank">
+                    <img src="" alt="">
+                </a>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
+                    architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
+                
+            </article>
+            
+        </section>
+
+        <!-- REFERENS -->
+        <section class="reference" id="reference"
+        >
+        <h2>Referenser</h2>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium ea ipsa officiis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, laudantium?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ad voluptate velit hic ipsum!</p>
+            
+        </section>
+
+         <!-- KONTAKTFORM -->
+        <section class="contact" id="contact">
+
+            <h2 class="contact-header">Kontakta mig</h2>
+
+            <article class="contact-me">
+
+                <!-- Formulär -->
+                <div class="contact-form">
+
+                    <p>Använd nedan formulär för att komma i kontakt med mig</p>
+
+                    <form action="">
+                        <label for="name">*Namn:</label>
+                        <input type="text" name="name" id="name" placeholder="Ange namn" required>
+                        <label for="email">*E-post:</label>
+                        <input type="email" name="email" id="email" placeholder="Ange e-post" required>
+
+                        <label for="tel">*Telefonnummer:</label>
+                        <input type="tel" name="tel" id="tel" placeholder="Ange telefonnummer" pattern="\d+" required>
+                        
+                        <label for="message">Meddelande:</label>
+                        <textarea name="message" id="message" cols="40" rows="6" placeholder="Ange meddelande"></textarea>
+    
+                        <!-- Knapp -->
+                        <input type="submit" value="Skicka" class="button">
+                    </form>
+                </div>
+                
+                <!-- Kontaktuppgifter -->
+                <address>
+                    <p>hanna.mickels@yh.nackademin.se</p>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/hanna-mickels-3a54b3173/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Hanna282" target="_blank">GitHub</a></li>
+                    </ul>
+                </address>
+            </article>
+            
+        </section>
+    </main>
+
+    <footer>
+
+        <!-- Nav menyn -->
+        <div class="footer-menu">
+            <ul>
+                <li><a class="header-menu-item" href="#home">Hem</a></li>
+                <li><a class="header-menu-item" href="#about">Om mig</a></li>
+                <li><a class="header-menu-item" href="#portfolio">Portfolio</a></li>
+                <li><a class="header-menu-item" href="#reference">Referenser</a></li>
+                <li><a class="header-menu-item" href="#contact">Kontakta mig</a></li>
+            </ul>
+        </div>
+
+        <!-- Kontaktuppgifter länkar -->
+        <address>
+            <ul>
+                <li><a class="footer-link-item" href="https://www.linkedin.com/in/hanna-mickels-3a54b3173/" target="_blank">
+                    <i class='bx bxl-linkedin-square'></i></a>
+                </li>
+                <li><a class="footer-link-item" href="https://github.com/Hanna282" target="_blank">
+                    <i class='bx bxl-github' ></i></a>
+                </li>
+            </ul>
+        </address>
+
+        <p>&copy; Copyright 2024</p>
+    </footer>
 
 </body>
 </html>
