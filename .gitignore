@@ -1,0 +1,20 @@
+# VS Code settings
+.vscode/
+
+# OS-specific files
+.DS_Store # För macOS
+Thumbs.db # För Windows
+
+# Loggar
+*.log
+
+# Temp och cache-filer
+*.tmp
+*.swp
+
+# Kompilerade filer (om du använder byggverktyg)
+dist/
+build/
+
+# .env och andra känsliga filer
+.env
