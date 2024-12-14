@@ -1,7 +1,944 @@
-@import url('https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap'); 
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
-*{
-    padding:0;
-    margin:0; 
-    box-sizing: border-box;
-} 
+/* VARIABLES */
+:root {
+    --background-color-header: black;
+    --color-header-text: white;
+    --box-shadow-menu-mini: 0 0 30px rgba(0, 0, 0, 0.19);
+
+    --background-color-about: white;
+    --color-text-about: black;
+    --background-color-download-button: blue;
+    --background-color-download-button-hover: #5543a3;
+    --box-shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    --background-color-skills: white;
+    --color-text-skills: black;
+
+    --background-color-portfolio: white;
+    --background-color-portfolio-article-hover: grey;
+    --color-text-portfolio: black;
+    --box-shadow-article-hover: 0px 4px 20px rgba(0, 0, 0, 0.2);
+
+    --background-color-reference: white;
+    --background-color-reference-article-hover: grey;
+    --color-text-reference: black;
+
+
+    --background-color-contact: white;
+    --color-text-contact: black;
+    --background-color-circle: grey;
+    --background-color-button-submit: grey;
+    --background-color-button-submit-hover: grey;
+    --box-shadow-link-hover: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    --background-color-footer: black;
+    --color-footer-text: white;
+
+    --color-text-black: black;
+    --color-text-white: white;
+    --color-text-links-hover: grey;
+    --background-color-item-hover: grey;
+}
+
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+/* General styling for the body element */
+body {
+    background-color: var(--background-color-body);
+    font-family: 'Hubot Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't exceed element's width */
+}
+
+/* Styling Header section starts */
+.header-home {
+    background-color: var(--background-color-header);
+    color: var(--color-header-text);
+    height: auto; /* Let the height adjust automatically based on content */
+    padding: 2.5rem; 
+    padding-left: 5rem; 
+    padding-right: 5rem; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; /* Vertically center elements */
+    width: 100%;
+
+    /* Make the header sticky to stay at the top on scroll */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+nav {
+    display: flex; 
+    justify-content: right;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Vertically center menu items */
+    gap: 20px;
+    list-style: none;
+}
+
+.header-menu-item {
+    color: var(--color-header-text);
+    text-decoration: none;
+    padding: 0.25rem 0.625rem; 
+}
+
+.header-menu-item:hover {
+    background-color: var(--background-color-item-hover);
+    border-radius: 0.625rem;
+}
+
+.header-hamburger {
+    display: none; /* Hides the hamburger icon by default */
+}
+
+#check:checked~.header-menu-mini {
+    display: flex; /* Display the mobile menu when the checkbox is checked */
+}
+
+.header-menu-mini li {
+    padding: 0.625rem 0;
+    font-size: 1.375rem; 
+    display: block; /* Ensure each item takes up the full width */
+    text-align: right;
+}
+
+/* General styling for the main element */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+    margin: 0; /* Remove default margin to prevent overflow  */
+}
+
+main h2 {
+    font-size: 1.875rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.875rem; 
+    display: block;
+    width: 100%;
+}
+
+section {
+    max-width: 100%;
+    width: 100%;
+    margin: 0; /* Remove default margin to prevent overflow */
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-bottom: 2.5rem ;
+    box-sizing: border-box; /* Ensures padding doesn't exceed element's width */
+    scroll-margin-top: 7.5rem;
+}
+
+/* Styling About section starts */
+.about {
+    background-color: var(--background-color-about);
+    box-shadow: 0 0 0 80px var(--background-color-about);
+    color: var(--color-text-about);
+    box-sizing: border-box; /* Ensures padding doesn't exceed element's width */
+    width: 100%;
+    max-width: 100%; /* Prevent overflow */
+    min-height: 50rem; 
+    margin-top: 3.125rem; 
+    padding-left: 2.5rem; 
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: left;
+    margin: 1.25rem; 
+    padding-left: 0.9375rem;
+    display: block;
+    width: 50%;
+}
+
+.about-me {
+    margin: 1.875rem;
+    height: 34.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-me-information {
+    max-width: 50%;
+}
+
+.about-me-information p {
+    margin-top: 2rem;
+    font-size: 1.375rem; 
+    line-height: 1.6;
+}
+
+.button-download {
+    text-decoration: none;
+    padding: 1.25rem 2.5rem; 
+    margin-top: 3.125rem; 
+    font-weight: 700;
+    color: var(--color-text-white);
+    background-color: var(--background-color-download-button);
+    display: inline-block;
+    box-shadow: var(--box-shadow-small);
+    border-radius: 2.5rem; 
+    font-size: 1.25rem; 
+    text-align: center;
+    transition: all 0.3s ease; 
+}
+
+.button-download:hover {
+    background-color: var(--background-color-download-button-hover);
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-3px); /* Slightly lifts the button when hovered */
+}
+
+.button-download:active {
+    transform: translateY(1px); /* Gives a pressed effect when the button is clicked */
+}
+
+.about-me-portrait {
+    transform: translateX(-9.375rem) translateY(-6.25rem); /* Manual positioning */
+}
+
+.about-me-img {
+    height: 34.375rem;
+    border-radius: 50%;
+}
+
+/* Styling Skills section starts */
+.skills {
+    background-color: var(--background-color-skills);
+    box-shadow: 0 0 0 40px var(--background-color-skills);
+    color: var(--color-text-skills);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 1.25rem;
+    box-sizing: border-box; /* Ensures padding doesn't exceed element's width */
+    padding-bottom: 70px;
+}
+
+.skills h2 {
+    margin-bottom: 3.125rem; 
+    width: 100%;
+}
+
+.skills p {
+    text-align: center;
+    margin-bottom: 0.9375rem; 
+    width: 100%;
+    padding-left: 5.625rem;
+    padding-right: 5.625rem; 
+    box-sizing: border-box; /* Ensures padding doesn't exceed element's width */
+}
+
+/* Styling Portfolio section starts */
+.portfolio {
+    background-color: var(--background-color-portfolio);
+    box-shadow: 0 0 0 40px var(--background-color-portfolio);
+    color: var(--color-text-portfolio);
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if they don't fit in one row */
+    justify-content: center;
+    width: 100%;
+    max-width: 100%; /* Prevents overflow, ensures content stays within container */
+    padding: 0;
+    padding-bottom: 2.5rem;
+    box-sizing: border-box; /* Ensures padding doesn't exceed element's width */
+}
+
+.portfolio h2 {
+    margin-bottom: 1.875rem;
+    margin-top: 0.625rem;
+    padding-left: 1.875rem;
+}
+
+.portfolio article {
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    max-width: 25rem;
+    margin: 1.875rem;
+    box-sizing: border-box; /* Ensures padding doesn't exceed the element's width */
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.portfolio article:hover {
+    box-shadow: var(--box-shadow-article-hover);
+    transform: scale(1.03); /* Slightly enlarges the article on hover */
+    transition: all 0.3s ease; /* Smooth transition for the hover effects */
+    background-color: var(--background-color-portfolio-article-hover);
+}
+
+.portfolio article h3 {
+    font-weight: 500;
+    font-size: 1.25rem; 
+    margin-bottom: 1.25rem ; 
+}
+
+.portfolio article img {
+    border-radius: 0.625rem; 
+    width: 100%;
+    height: 21.875rem ; 
+}
+
+.portfolio article p {
+    margin-top: 1rem; 
+    font-size: 1rem; 
+}
+
+/* Styling Reference section starts */
+.reference {
+    background-color: var(--background-color-reference);
+    box-shadow: 0 0 0 40px var(--background-color-reference);
+    color: var(--color-text-reference);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0;
+    padding-bottom: 3.75rem;
+    box-sizing: border-box; /* Ensures padding doesn't exceed the element's width */
+}
+
+.reference h2 {
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+}
+
+.reference article {
+    max-width: 28.125rem;
+    margin: 1.25rem;
+    box-sizing: border-box; /* Ensures padding doesn't exceed the element's width */
+    height: auto;
+    padding: 1.25rem;
+}
+
+.reference article:hover {
+    box-shadow: var(--box-shadow-article-hover);
+    transform: scale(1.03); /* Slightly scales up the article for a hover effect */
+    transition: all 0.3s ease; /* Smoothens the transition for hover effects */
+    background-color: var(--background-color-reference-article-hover);
+}
+
+.reference-text {
+    margin-top: 1rem;
+    margin-bottom: 1.0625rem ; 
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.reference-name {
+    margin: 0.25rem; 
+    font-size: 1rem; 
+    text-align: right;
+}
+
+/* Styling Contact section starts */
+.contact {
+    background-color: var(--background-color-contact);
+    box-shadow: 0 0 0 60px var(--background-color-contact);
+    color: var(--color-text-contact);
+    box-sizing: border-box; /* Ensures padding doesn't exceed the element's width */
+    margin-bottom: 3.75rem;
+    max-width: 100%;
+}
+
+.contact-header {
+    margin-bottom: 3.125rem;
+}
+
+.contact-me {
+    margin: 1.875rem;
+    margin-left: 6.5625rem;
+    padding-right: 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form p {
+    margin-bottom: 1.375rem;
+}
+
+.contact-form-label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-weight: 450;
+}
+
+input,
+textarea {
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    width: 70%;
+}
+
+input {
+    width: 60%;
+}
+
+.button-submit {
+    font-size: 1rem;
+    padding: 0.625rem 1.125rem;
+    width: 20%;
+    display: flex;
+    font-family: inherit;
+    background-color: var(--background-color-button-submit);
+    box-shadow: var(--box-shadow-small);
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.button-submit:hover {
+    opacity: 90%;
+    cursor: pointer;
+    background-color: var(--background-color-button-submit-hover);
+}
+
+.button-submit:active {
+    transform: translateY(1px); /* Provides a pressing effect by moving the button down when clicked */
+    box-shadow: none;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.25rem; 
+    font-style: normal;
+    font-size: 1.25rem; 
+    /* Below creates a square container and circular shape with shadows for a layered effect */
+    width: 25rem; 
+    height: 25rem;
+    border: 3px solid var(--background-color-circle);
+    background-color: var(--background-color-circle);
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.contact-info:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+        0 12px 30px rgba(0, 0, 0, 0.15); /* Increases the shadow effect when hovering */
+    transform: translateY(-4px); /* Slightly moves the element upwards on hover for a 3D effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.contact-info p {
+    margin-bottom: 1.25rem;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul a:hover {
+    color: var(--color-text-links-hover);
+    text-decoration: none;
+    transform: translateY(-3px); /* Slight upward movement on hover */
+    box-shadow: var(--box-shadow-link-hover);
+}
+
+.contact-info a {
+    color:var(--color-text-black);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 1.25rem;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Makes the link behave like a button */
+}
+
+/* Styling Footer section starts */
+footer {
+    background-color: var(--background-color-footer);
+    text-align: center;
+    padding: 2.1875rem;
+    padding-bottom: 1.25rem;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.footer-menu-item {
+    text-decoration: none;
+    color: var(--color-footer-text);
+    padding: 0.25rem 0.625rem;
+}
+
+.footer-menu-item:hover {
+    background-color: var(--background-color-item-hover);
+    border-radius: 0.625rem;
+}
+
+.footer-link {
+    margin: 1.25rem 0;
+    text-align: center;
+}
+
+.footer-menu ul,
+.footer-link ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-link-item {
+    font-size: 2.25rem;
+    list-style-type: none;
+    color: var(--color-footer-text);
+    margin: 0 0.9375rem;
+}
+
+.footer-link-item:hover {
+    color: var(--background-color-item-hover);
+    transform: scale(1.1); /* Slightly enlarges the link item */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smoothly transitions the scaling and color changes */
+}
+
+footer p {
+    font-size: 0.875rem;
+    margin: 1.25rem;
+    color: var(--color-footer-text);
+}
+
+/* Media query for small to medium laptops and larger tablets */
+@media (min-width: 1242px) and (max-width: 1560px){
+ 
+    /* Styling About section starts */
+    h1 {
+        font-size: 2.3125rem;
+    }
+
+    .about-me-portrait {
+        transform: translateX(-1.25rem) translateY(-3.75rem);
+    }
+
+    .about-me-img {
+        height: 26.25rem;
+        border-radius: 50%;
+    }
+
+    /* Styling Contact section starts */
+    .contact-me {
+        padding: 0;
+    }
+
+    .contact-form p{
+        font-size: 1.125rem;
+    }
+
+    .button-submit {
+        width: 30%;
+    } 
+
+    .contact-info {
+        width: 23.125rem; 
+        height: 23.125rem; 
+        font-size: 1.125rem; 
+    }  
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1242px){
+
+    /* Styling Header section starts */
+    .header-home {
+        padding: 1.25rem; 
+        padding-right: 6.25rem; 
+        padding-left: 6.25rem; 
+    }
+
+    .header-menu, #check {
+        display: none;
+    }
+
+    .header-logo {
+        font-size: 1.25rem;
+    }
+
+    .header-hamburger {
+        display: inline-block;
+        font-size: 2.1875rem;
+    }
+
+    .bx {
+        cursor: pointer;
+    }
+
+    .header-menu-mini {
+        display: none;
+        position: fixed;
+        top: 100%;
+        visibility: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: var(--box-shadow-menu-mini);
+        border-radius: 2rem 0 2rem 2rem;
+        margin: 0 auto;
+        padding: 1.5em 1.5em;
+        background: var(--background-color-header);
+        position: absolute;
+        /* visibility: visible;
+        opacity: 1; */
+        right: 0px;
+        cursor: default;
+    }
+
+    /* Styling About section starts */
+    .about {
+        margin-bottom: 5rem; 
+    }
+
+    h1 {
+        font-size: 1.875rem; ;
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 3.125rem;
+    }
+
+    .about-me {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .about-me-information {
+        max-width: 100%;
+        padding: 1.25rem;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .button-download {
+        text-align: center;
+        margin-top: 3.125rem;
+    }
+
+    .about-me-portrait {
+        transform: translateX(0) translateY(0); /* Resets previous translations */
+        margin-top: 2.5rem;
+    }
+
+    .about-me-img {
+        height: 21.875rem; 
+        border-radius: 50%;
+    }
+
+    /* Styling Skills section starts */
+    .skills {
+        margin-top: 2.5rem;
+    }
+
+    /* Styling Portfolio section starts */
+    .portfolio h2 {
+        margin-bottom: 1.875rem;
+        margin-top: 0.625rem;
+        padding-right: 3.125rem;
+    }
+
+    /* Styling Contact section starts */
+    .contact-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .contact-form {
+        width: 90%;
+        max-width: 31.25rem;
+        padding-top: 1.25rem;
+        padding-left: 0;
+    }
+
+    .contact-form-label {
+        margin-bottom: 0.125rem;
+        font-weight: 400;
+        font-size: 0.875rem;
+    }
+
+    input {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 25rem;
+    }
+
+    .button-submit {
+        width: 30%;
+        max-width: 18.75rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .contact-info {
+        margin: 3.75rem;
+        margin-right: 6.875rem;
+        margin-left: 3.125rem;
+        width: 21.875rem;
+        height: 21.875rem;
+        font-size: 1.0625rem;
+    }
+}
+
+
+/* Media query for mobile */
+@media (max-width: 767px) {
+
+    /* Styling Header section starts */
+    .header-home {
+        padding: 1.25rem;
+    }
+
+    .header-menu, #check {
+        display: none;
+    }
+
+    .header-logo {
+        font-size: 1.125rem;
+    }
+
+    .header-hamburger {
+        display: inline-block;
+        font-size: 1.6875rem;
+    }
+    .bx {
+        cursor: pointer;
+    }
+
+    .header-menu-mini {
+        display: none;
+        position: fixed;
+        top: 100%;
+        visibility: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: var(--box-shadow-menu-mini);
+        border-radius: 2rem 0 2rem 2rem;
+        margin: 0 auto;
+        padding: 1.6875rem 1.6875rem;
+        background: var(--background-color-header);
+        position: absolute;
+        /* visibility: visible;
+        opacity: 1; */
+        right: 0;
+        cursor: default;
+    }
+
+    .header-menu-mini li {
+        font-size: 1.125rem;
+    }
+
+    /* Styling About section starts */
+    .about {
+        margin-bottom: 5rem; 
+        padding-left: 2.1875rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        text-align: left;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 1.875rem; 
+    }
+
+    .about-me {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        margin-top: 1.25rem; 
+    }
+
+    .about-me-information {
+        max-width: 100%;
+        padding: 0;
+        text-align: left;
+    }
+
+    .about-me-information p {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .download-button {
+        text-align: center;
+        margin-top: 1.875rem;
+        font-size: 1rem;
+    }
+
+    .about-me-portrait {
+        transform: translateX(0) translateY(0);
+        margin-top: 3.4375rem;
+    }
+
+    .about-me-img {
+        height: 21.875rem;
+    }
+
+    /* Styling Skills section starts */
+    .skills p {
+        text-align: left;
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
+        font-size: 0.9375rem;
+    }
+
+    /* Styling Portfolio section starts */
+    .portfolio h2 {
+        margin-bottom: 1.875rem;
+        margin-top: 0.625rem;
+        padding-right: 3.75rem;
+    }
+
+    /* Styling Reference section starts */
+    .reference {
+        margin-top: 1.25rem;
+        margin-bottom: 3.75rem;
+        padding-right: 0;
+    }
+
+    .reference article {
+        margin: 1.875rem;
+        margin-top: 0.9375rem;
+        margin-bottom: 0.9375rem;
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+    }
+    
+    .reference-text {
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+    
+    .reference-name {
+        font-size: 0.9375rem;
+        margin-bottom: 0rem;
+    }
+
+    /* Styling Contact section starts */
+    .contact-me {
+        padding: 0 1.25rem;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+
+    .contact-form {
+        width: 100%; 
+        max-width: auto; 
+        padding-top: 0.9375rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-form p, .contact-info p, .contact-info li {
+        font-size: 0.875rem;
+    }
+    
+    .contact-form-label {
+        font-size: 0.8125rem;
+    }
+    
+    input {
+        padding: 0.625rem;
+        margin-bottom: 0.75rem;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 100%; 
+    }
+
+    .button-submit {
+        width: 30%; 
+    }
+    
+    .contact-info {
+        margin: 1.875rem auto;
+        width: 17.5rem;
+        height: 17.5rem;
+    }
+    
+    /* Styling Footer section starts */
+    footer {
+        padding: 1.25rem;
+        height: auto;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .footer-menu-item {
+        font-size: 0.9375rem;
+        padding: 0.5rem;
+    }
+
+    .footer-link {
+        margin-top: 1.25rem;
+    }
+    
+    .footer-link ul {
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+    }
+    
+    .footer-link-item {
+        font-size: 1.25rem;
+        margin: 0 0.3125rem;
+    }
+    
+    footer p {
+        font-size: 0.6875rem;
+        margin-top: 0.625rem;
+    }
+}
