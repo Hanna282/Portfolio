@@ -217,7 +217,8 @@ h1 {
 }
 
 .about-me-portrait {
-    transform: translateX(-9.375rem) translateY(-6.25rem); /* Manual positioning */
+    transform: translateX(-6.375rem) translateY(-6.25rem); /* Manual positioning */
+    /* transform: translateX(-9.375rem) translateY(-6.25rem); Manual positioning */
 }
 
 .about-me-img {
@@ -784,7 +785,7 @@ footer p {
     }
 
     h1 {
-        font-size: 1.25rem;
+        font-size: 1.55rem; 
         text-align: left;
         width: 100%;
         padding-left: 0;
@@ -898,7 +899,8 @@ footer p {
     }
 
     .button-submit {
-        width: 30%; 
+        /* width: 30%;  */
+        width: auto;
     }
     
     .contact-info {
