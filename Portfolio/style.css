@@ -29,8 +29,8 @@
     --background-color-contact: white;
     --color-text-contact: black;
     --background-color-circle: grey;
-    --background-color-button-submit: grey;
-    --background-color-button-submit-hover: grey;
+    --background-color-button-form1: grey;
+    --background-color-button-form1-hover: grey;
     --box-shadow-link-hover: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     --background-color-footer: black;
@@ -390,6 +390,7 @@ h1 {
 
 .contact-form-label {
     display: block;
+    margin-top: 1rem;
     margin-bottom: 0.375rem;
     font-weight: 450;
 }
@@ -398,37 +399,50 @@ input,
 textarea {
     font-size: 0.875rem;
     padding: 0.625rem;
-    margin-bottom: 1rem;
     font-family: inherit;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
     width: 70%;
 }
 
+input:focus, textarea:focus { 
+    outline: none;
+    box-shadow: none;
+}
+
 input {
     width: 60%;
 }
 
-.button-submit {
+.pristine-error{ 
+    color: #8b0a0a;
+    font-size: smaller;
+}
+
+.form1-button-container {
+    display: flex; 
+    gap: 0.5rem; 
+}
+
+.button-form1 {
     font-size: 1rem;
     padding: 0.625rem 1.125rem;
+    margin-top: 0.625rem;
     width: 20%;
-    display: flex;
-    font-family: inherit;
-    background-color: var(--background-color-button-submit);
+    background-color: var(--background-color-button-form1);
     box-shadow: var(--box-shadow-small);
     border-radius: 0.5rem;
     border: 1px solid #ccc;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.button-submit:hover {
+.button-form1:hover {
     opacity: 90%;
     cursor: pointer;
-    background-color: var(--background-color-button-submit-hover);
+    background-color: var(--background-color-button-form1-hover);
 }
 
-.button-submit:active {
+.button-form1:active {
     transform: translateY(1px); /* Provides a pressing effect by moving the button down when clicked */
     box-shadow: none;
 }
@@ -568,7 +582,7 @@ footer p {
         font-size: 1.125rem;
     }
 
-    .button-submit {
+    .button-form1 {
         width: 30%;
     } 
 
@@ -700,12 +714,11 @@ footer p {
     .contact-form-label {
         margin-bottom: 0.125rem;
         font-weight: 400;
-        font-size: 0.875rem;
+        font-size: 0.9375rem; 
     }
 
     input {
         padding: 0.75rem;
-        margin-bottom: 1rem;
     }
 
     textarea {
@@ -713,10 +726,11 @@ footer p {
         max-width: 25rem;
     }
 
-    .button-submit {
+    .button-form1 {
         width: 30%;
         max-width: 18.75rem;
         padding: 0.75rem 1.5rem;
+        margin-top: 0.625rem;
     }
 
     .contact-info {
@@ -890,17 +904,23 @@ footer p {
     
     input {
         padding: 0.625rem;
-        margin-bottom: 0.75rem;
+        font-size: 0.7125rem; 
+        width: 90%;
     }
 
     textarea {
         width: 100%;
         max-width: 100%; 
+        font-size: 0.7125rem; 
     }
 
-    .button-submit {
-        /* width: 30%;  */
-        width: auto;
+    .pristine-error{
+        font-size: 0.7125rem;
+    }
+
+    .button-form1 {
+        width: 40%; 
+        margin-top: 0.625rem;
     }
     
     .contact-info {
