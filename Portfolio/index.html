@@ -158,19 +158,34 @@
                 <article class="contact-form">
                     <p>Använd nedan formulär för att komma i kontakt med mig</p>
 
-                    <form action="" method="post">
-                        <label for="name" class="contact-form-label" >*Namn:</label>
-                        <input type="text" name="name" id="name" placeholder="Ange namn" required>
-                        <label for="email" class="contact-form-label">*E-post:</label>
-                        <input type="email" name="email" id="email" placeholder="Ange e-post" required>
-    
-                        <label for="tel" class="contact-form-label">*Telefonnummer:</label>
-                        <input type="tel" name="tel" id="tel" placeholder="Ange telefonnummer" pattern="\d+" required>
-                        
-                        <label for="message" class="contact-form-label">Meddelande:</label>
-                        <textarea name="message" id="message" cols="40" rows="6" placeholder="Ange meddelande"></textarea>
-    
-                        <input type="submit" value="Skicka" class="button-submit">
+                    <form id="form1" action="https://formshow.systementor.se/" method="POST" novalidate>
+                        <div class="form-items">
+                            <label for="name" class="contact-form-label">*Namn:</label>
+                            <input type="text" name="name" id="name" placeholder="Ange namn">
+                        </div>
+
+                        <div class="form-items">
+                            <label for="email" class="contact-form-label">*E-post:</label>
+                            <input type="email" name="email" id="email" required placeholder="Ange e-post" 
+                                data-pristine-required-message="Ange en e-postadress" 
+                                data-pristine-email-message="Ange en giltig e-postadress">
+                        </div>
+
+                        <div class="form-items"> 
+                            <label for="tel" class="contact-form-label">*Telefonnummer:</label>
+
+                            <input type="tel" name="tel" id="tel" placeholder="Ange telefonnummer">
+                        </div>
+
+                        <div class="form-items">
+                            <label for="message" class="contact-form-label">Meddelande:</label>
+                            <textarea name="message" id="message" cols="40" rows="6" placeholder="Ange meddelande"></textarea>
+                        </div>
+
+                        <div class="form1-button-container"> 
+                            <input type="submit" value="Skicka" class="button-form1">
+                            <input type="reset" value="Nollställ" class="button-form1"> 
+                        </div>
                     </form>
                 </article>
                 
@@ -210,5 +225,7 @@
         <p>&copy; Copyright 2024</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/pristinejs@1.1.0/dist/pristine.min.js"></script>
+    <script src="initpristine.js" defer></script> 
 </body>
 </html>
