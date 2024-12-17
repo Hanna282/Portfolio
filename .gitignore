@@ -1,3 +1,6 @@
+# Node.js dependencies
+node_modules/
+
 # VS Code settings
 .vscode/
 
@@ -5,16 +8,17 @@
 .DS_Store # För macOS
 Thumbs.db # För Windows
 
-# Loggar
+# Logs
 *.log
 
-# Temp och cache-filer
+# Temp and cache-files
 *.tmp
 *.swp
 
-# Kompilerade filer (om du använder byggverktyg)
+# Build output
 dist/
 build/
 
-# .env och andra känsliga filer
+# Environment files
 .env
+.env.local
