@@ -1,14 +1,14 @@
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function() {
 
-    //Creates the pristine instance
-    let form = document.getElementById("form1");
-    let pristine = new Pristine(form, {
+    // Creates the pristine instance
+    const form = document.getElementById("form1");
+    const pristine = new Pristine(form, {
         classTo: 'form-items',
         errorTextParent: 'form-items',
     });
 
-    //Validation for name field
-    let name = document.getElementById("name");
+    // Validation for name field
+    const name = document.getElementById("name");
     pristine.addValidator(name, function (value, el) {
 
         if (value.length < 1) {
@@ -21,7 +21,7 @@ window.onload = function () {
             return false;
         }
 
-        let pattern = /^[A-Za-z]{2,}(-[A-Za-z]+)?( [A-Za-z]+(-[A-Za-z]+)*)*$/;
+        const pattern = /^[A-Za-z]{2,}(-[A-Za-z]+)?( [A-Za-z]+(-[A-Za-z]+)*)*$/;
         return pattern.test(value);
 
     }, function (value, el) {
@@ -39,12 +39,12 @@ window.onload = function () {
         return "Felaktigt format angivet";
     }, 2, false);
 
-    //Validation for tel/phone field
-    let tel = document.getElementById("tel");
+    // Validation for tel/phone field
+    const tel = document.getElementById("tel");
     pristine.addValidator(tel, function (value, el) {
 
-        let containsDash = /-/.test(value);
-        let pattern = /^(?:\+46|0|0046)[ ]?7\d{1}[ ]?(\d{3})[ ]?(\d{2})[ ]?(\d{2})$/;
+        const containsDash = /-/.test(value);
+        const pattern = /^(?:\+46|0|0046)[ ]?7\d{1}[ ]?(\d{3})[ ]?(\d{2})[ ]?(\d{2})$/;
 
         if (value.length < 1) {
             return false;
@@ -68,11 +68,11 @@ window.onload = function () {
         }, 2, false);
 
 
-    //Submit form
+    // Submit form
     form.addEventListener('submit', function (e) {
-        e.preventDefault(); //Prevents the form from submitting and the page from reloading
+        e.preventDefault(); // Prevents the form from submitting and the page from reloading
 
-        let valid = pristine.validate();
+        const valid = pristine.validate();
 
         if (valid) {
             form.submit();
@@ -81,13 +81,13 @@ window.onload = function () {
         }
     });
 
-    //Reset input fields
+    // Reset input fields
     form.addEventListener('reset', function (e) {
         form.reset();
     });
 
-    //Reset error messages
+    // Reset error messages
     form.addEventListener('reset', function (e) {
         pristine.reset();
     });
-};
+});

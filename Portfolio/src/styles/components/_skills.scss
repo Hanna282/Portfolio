@@ -1,0 +1,45 @@
+.skills {
+    background-color: var(--background-color-skills);
+    box-shadow: 0 0 0 40px var(--background-color-skills);
+    color: var(--text-color-skills);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 1.25rem;
+    box-sizing: border-box; // Ensures padding doesn't exceed element's width 
+    padding-bottom: 4.375rem; 
+}
+
+.skills h2 {
+    margin-bottom: 3.125rem;
+    width: 100%;
+}
+
+.skills p {
+    text-align: center;
+    margin-bottom: 0.9375rem;
+    width: 100%;
+    padding-left: 5.625rem;
+    padding-right: 5.625rem;
+    box-sizing: border-box; // Ensures padding doesn't exceed element's width 
+}
+
+// ====== Media query for tablets ======= 
+
+@media (min-width: 768px) and (max-width: 1242px) {
+    .skills {
+        margin-top: 2.5rem;
+    }
+}
+
+// ====== Media query for mobile ======= 
+
+@media (max-width: 767px) {
+    .skills p {
+        text-align: left;
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
+        font-size: 0.9375rem;
+    }
+}
