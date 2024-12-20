@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio Hanna Mickels</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="src/style.css">
-    <!-- BoxIcons -->
+    <link rel="icon" href="/favicon.png" type="image/png"> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <title>Portfolio Hanna Mickels</title>
 </head>
 
 <body>
     
     <header class="header-home">
         <h3 class="header-logo">Utvecklare Hanna Mickels</h3>
-
         <nav>
             <ul class="header-menu">
                 <li><a class="header-menu-item" href="#">Hem</a></li>
@@ -28,7 +22,6 @@
                 <li><a class="header-menu-item" href="#contact">Kontakta mig</a></li>
             </ul>
         </nav>
-
         <div class="header-hamburger">
               <!-- When you click the label/icon, the checkbox is checked -->
             <input type="checkbox" id="check">
@@ -49,9 +42,8 @@
     <main>
 
         <section class="about" id="about"> 
-            <h1>Hej! Mitt namn är Hanna Mickels</h1>
+            <h1 class="about-header">Hej! Mitt namn är Hanna Mickels</h1>
             <article class="about-me">
-
                 <div class="about-me-information">
                     <p>Om mig...........
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, error earum? 
@@ -60,65 +52,57 @@
                     </p>
                     <a class="button-download" href="#">Hämta mitt CV</a>
                 </div>
-
                 <div class="about-me-portrait" >
-                    <img class="about-me-img" src="Images/Portrait.jpg" eight="300" alt="Porträtt">
+                    <img class="about-me-img" src="Images/Portrait.jpg" alt="Porträtt" loading="lazy">
                 </div>
-
             </article>
         </section>
 
-         <section class="skills"> 
+        <section class="skills"> 
             <h2>Färdigheter</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolorum.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus voluptates dicta illum eum! 
                 Nobis omnis ipsa sapiente et perspiciatis culpa, sed harum aperiam. Doloremque.</p>
         </section>
 
-        <section class="portfolio" id="porfolio">
+        <section class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
-
             <article>
                 <h3>Hotellboknings applikation</h3>
-                <!-- Ändra till rätt länk Github -->
-                <a href="https://www.google.se/" target="_blank">
-                    <img src="Images/Hotelbooking.png" alt="Hotelbooking application">
+                <a href="https://github.com/Hanna282/HotelBooking" target="_blank">
+                    <img src="Images/Hotelbooking.png" alt="Hotelbooking application" loading="lazy">
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
                     architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
             </article>
-
             <article>
                 <h3>Annons applikation</h3>
-                <a href="https://www.google.se/" target="_blank">
-                    <img src="Images/Advert.png" alt="Advert application">
+                <a href="https://github.com/Hanna282/Fyndit_Marketplace" target="_blank">
+                    <img src="Images/Advert.png" alt="Advert application" loading="lazy">
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
                     architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
             </article>
-
             <article>
                 <h3>Shotgun spel</h3>
-                <a href="https://www.google.se/" target="_blank">
-                    <img src="Images/Shotgun.png" alt="Shotgun game">
+                <a href="https://github.com/Hanna282/ShotgunGame" target="_blank">
+                    <img src="Images/Shotgun.png" alt="Shotgun game" loading="lazy">
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
                     architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
             </article>
-    
             <article>
                 <h3>Adressbok</h3>
-                <a href="https://www.google.se/" target="_blank">
-                    <img src="Images/Addressbook.png" alt="Addressbook">
+                <a href="https://github.com/Hanna282/Addressbook" target="_blank">
+                    <img src="Images/Addressbook.png" alt="Addressbook" loading="lazy">
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
                     architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
             </article>
-
             <article>
                 <h3>Text adventure spel</h3>
-                <a href="https://www.google.se/" target="_blank">
-                    <img src="Images/MissingAmuletAdventure.png" alt="Text adventure game">
+                <a href="https://github.com/Hanna282/MissingAmuletAdventure" target="_blank">
+                    <img src="Images/MissingAmuletAdventure.png" alt="Text adventure game" loading="lazy">
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi tenetur fugiat debitis 
                     architecto quidem repellat doloremque unde placeat delectus. Cumque, est?</p>
@@ -127,68 +111,56 @@
 
         <section class="reference" id="reference">
             <h2>Referenser</h2>
-
             <article>
                 <p class="reference-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Maxime cum quidem mollitia sunt inventore architecto est nemo iusto? Nam quidem molestias temporibus repellat recusandae ratione!</p>
-                <div><p class="reference-name">- Förnamn Efternamn</p></div>
-                <div><p class="reference-name">Företag</p></div>
+                <p class="reference-name">- Förnamn Efternamn</p>
+                <p class="reference-name">Företag</p>
             </article>
-
             <article>
                 <p class="reference-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Maxime cum quidem mollitia sunt inventore architecto est nemo iusto? Nam quidem molestias temporibus repellat recusandae ratione!</p>
-                <div><p class="reference-name">- Förnamn Efternamn</p></div>
-                <div><p class="reference-name">Företag</p></div>
+                <p class="reference-name">- Förnamn Efternamn</p>
+                <p class="reference-name">Företag</p>
             </article>
-
             <article>
                 <p class="reference-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Maxime cum quidem mollitia sunt inventore architecto est nemo iusto? Nam quidem molestias temporibus repellat recusandae ratione!</p>
-                <div><p class="reference-name">- Förnamn Efternamn</p></div>
-                <div><p class="reference-name">Företag</p></div>
+                <p class="reference-name">- Förnamn Efternamn</p>
+                <p class="reference-name">Företag</p>
             </article>
         </section>
 
         <section class="contact" id="contact">
             <h2 class="contact-header">Kontakta mig</h2>
-
             <div class="contact-me">
-
                 <article class="contact-form">
                     <p>Använd nedan formulär för att komma i kontakt med mig</p>
-
                     <form id="form1" action="https://formshow.systementor.se/" method="POST" novalidate>
                         <div class="form-items">
                             <label for="name" class="contact-form-label">*Namn:</label>
-                            <input type="text" name="name" id="name" placeholder="Ange namn">
+                            <input type="text" name="name" id="name" placeholder="Ange namn" autocomplete="name">
                         </div>
-
                         <div class="form-items">
                             <label for="email" class="contact-form-label">*E-post:</label>
-                            <input type="email" name="email" id="email" required placeholder="Ange e-post" 
+                            <input type="email" name="email" id="email" required placeholder="Ange e-post" autocomplete="email"
                                 data-pristine-required-message="Ange en e-postadress" 
                                 data-pristine-email-message="Ange en giltig e-postadress">
                         </div>
-
                         <div class="form-items"> 
                             <label for="tel" class="contact-form-label">*Telefonnummer:</label>
-
-                            <input type="tel" name="tel" id="tel" placeholder="Ange telefonnummer">
+                            <input type="tel" name="tel" id="tel" placeholder="Ange telefonnummer" autocomplete="tel">
                         </div>
-
                         <div class="form-items">
                             <label for="message" class="contact-form-label">Meddelande:</label>
                             <textarea name="message" id="message" cols="40" rows="6" placeholder="Ange meddelande"></textarea>
                         </div>
-
                         <div class="form1-button-container"> 
                             <input type="submit" value="Skicka" class="button-form1">
                             <input type="reset" value="Nollställ" class="button-form1"> 
                         </div>
                     </form>
                 </article>
-                
                 <address class="contact-info">
                     <p>hanna.mickels@yh.nackademin.se</p>
                     <ul>
@@ -203,14 +175,13 @@
     <footer>
         <div class="footer-menu">
             <ul>
-                <li><a class="header-menu-item" href="#">Hem</a></li>
-                <li><a class="header-menu-item" href="#about">Om mig</a></li>
-                <li><a class="header-menu-item" href="#portfolio">Portfolio</a></li>
-                <li><a class="header-menu-item" href="#reference">Referenser</a></li>
-                <li><a class="header-menu-item" href="#contact">Kontakta mig</a></li>
+                <li><a class="footer-menu-item" href="#">Hem</a></li>
+                <li><a class="footer-menu-item" href="#about">Om mig</a></li>
+                <li><a class="footer-menu-item" href="#portfolio">Portfolio</a></li>
+                <li><a class="footer-menu-item" href="#reference">Referenser</a></li>
+                <li><a class="footer-menu-item" href="#contact">Kontakta mig</a></li>
             </ul>
         </div>
-
         <address class="footer-link">
             <ul>
                 <li><a class="footer-link-item" href="https://www.linkedin.com/in/hanna-mickels-3a54b3173/" target="_blank">
@@ -221,13 +192,11 @@
                 </li>
             </ul>
         </address>
-
         <p>&copy; Copyright 2024</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/pristinejs@1.1.0/dist/pristine.min.js"></script>
-    <!-- <script src="initpristine.js" defer></script>  -->
-    <script type="module" src="src/initpristine.js" defer></script> 
-
+    <script type="module" src="src/initpristine.js"></script> 
+    <script type="module" src="src/main.js"></script>
 </body>
 </html>
