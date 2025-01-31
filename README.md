@@ -1,5 +1,5 @@
 ﻿# Personal Portfolio Website
-Welcome to my portfolio website! This portfolio has been built to showcase my skills in web technologies. It features a digital portfolio with sections for my skills, projects and references. It includes several interactive features, such as a contact form and real-time weather data.
+Welcome to my portfolio website! This portfolio has been built to showcase my skills in web technologies. It features a digital portfolio with sections for my skills and projects. 
 
 
 
@@ -13,27 +13,7 @@ Welcome to my portfolio website! This portfolio has been built to showcase my sk
 
 - **Portfolio:** A showcase of projects I've worked on, including descriptions, images, and links to repositories.
 
-- **References:** Testimonials from colleagues and mentors highlighting my work ethic and skills.
-
-- **Contact:** Offers various ways to get in touch with me, such as through email, social media or a contact form. The form is equipped with validation to ensure accurate data submission.
-
-- **Weather API:** Users can enter the name of a city and retrieve real-time weather information via an external API.
-
-## Technologies
-- **HTML5:** Used for structuring the website with semantic elements for better accessibility and SEO.
-
-- **CSS3:** Provides styling for the website, ensuring a clean and responsive design.
-
-- **Sass (SCSS):** Enables efficient styling by modularizing and organizing CSS code.
-
-- **JavaScript:** Adds interactivity, implements form validation, and integrates the weather API.
-
-- **Pristine.js:** A form validation library that ensures users provide valid input before form submission.
-
-- **Vite:** Used as the build tool for faster development with modern JavaScript support.
-
-- **OpenWeather API:** Integrated to fetch and display real-time weather data based on the user's input of city name.
-
+- **Contact:** Offers various ways to get in touch with me, such as through email, linkedin or github.
 
 
 ## Installation
@@ -48,25 +28,3 @@ To run this project locally on your own computer you need to install dependencie
 
 4. **Start the development server**:  
    `npm run dev`
-
-
-
-## Usage
-Once the project is set up locally, you can interact with the website by doing the following:
--	**Explore the Portfolio:** Learn more about me, my skills, and my projects.
-
--	**Contact Form:** In the Contact section, users can fill out a form to get in touch with me.
-
--	**Weather Information:** In the Weather API section, users can enter a city name to retrieve current weather information.
-
-## Functionality
-- **Responsive Design:** The portfolio is designed to be user-friendly on both desktop and mobile devices.
-
-- **Form Validation:** The contact form validates user input before submission to ensure that only correct and complete data is sent.
-
-- **Weather Information:** Users can enter a city name to get current weather data using the OpenWeather API.
-
-
-
-## Future Improvements
-In the future, I plan to add more interactive features, improve performance, and possibly integrate additional APIs for further functionality.
