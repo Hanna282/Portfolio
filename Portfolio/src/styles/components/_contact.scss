@@ -1,96 +1,26 @@
 .contact {
-    background-color: var(--background-color-contact);
-    box-shadow: 0 0 0 60px var(--background-color-contact);
-    color: var(--text-color-contact);
-    box-sizing: border-box; // Ensures padding doesn't exceed the element's width 
+    background-color: var(--background-color-sections);
+    box-shadow: 0 0 0 60px var(--background-color-sections);
+    color: var(--text-color-default);
     margin-bottom: 3.75rem;
-    max-width: 100%;
+    scroll-margin-top: 7.5rem;
+    padding: 1.25rem;
 }
-
-.contact-header {
-    margin-bottom: 3.125rem;
-}
-
 .contact-me {
-    margin: 1.875rem;
-    margin-left: 6.5625rem;
-    padding-right: 12.5rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 1.875rem;
+    margin-left: 12.5625rem;
+    padding-right: 12.5rem;
 }
 
-.contact-form {
-    width: 50%;
+.contact-me-img {
+    height: 22.375rem;
+    border-radius: 10%;
 }
 
-.contact-form p {
-    margin-bottom: 1.375rem;
-}
-
-.contact-form-label {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 0.375rem;
-    font-weight: 450;
-}
-
-input,
-textarea {
-    font-size: 0.875rem;
-    padding: 0.625rem;
-    font-family: inherit;
-    border-radius: 0.5rem;
-    border: 1px solid #00000060;
-    width: 70%;
-    background-color: var(--background-color-form);
-}
-
-input {
-    width: 60%;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.pristine-error {
-    color: #8b0a0a;
-    font-size: smaller;
-}
-
-.form1-button-container {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.button-form1 {
-    font-size: 1rem;
-    padding: 0.625rem 1.125rem;
-    margin-top: 0.625rem;
-    width: 20%;
-    background-color: var(--background-color-button);
-    box-shadow: var(--box-shadow-button);
-    color: var(--text-color-button);
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    transition: all 0.3s ease; // Smooth transition for hover effects 
-}
-
-.button-form1:hover {
-    opacity: 90%;
-    cursor: pointer;
-    background-color: var(--background-color-button-hover);
-}
-
-.button-form1:active {
-    transform: translateY(1px); // Provides a pressing effect by moving the button down when clicked 
-    box-shadow: none;
-}
-
-.contact-info {
+.contact-me-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,169 +29,111 @@ textarea:focus {
     padding: 1.25rem;
     font-style: normal;
     font-size: 1.25rem;
-    // Below creates a square container and circular shape with shadows for a layered effect 
     width: 400px; 
     height: 400px; 
+    margin: 0; 
+    border-radius: 50%;
     border: 3px solid var(--background-color-circle);
     background-color: var(--background-color-circle);
-    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-info:hover {
+.contact-me-info:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.15);
-    transform: translateY(-4px); // Moves the element upwards on hover for a 3D effect 
-    transition: all 0.3s ease; // Smooth transition for all properties 
+    transform: translateY(-4px); 
+    transition: all 0.3s ease; 
 }
 
-.contact-info p {
+.contact-me-info-text {
     margin-bottom: 1.25rem;
 }
 
-.contact-info ul {
+.contact-me-info-list {
     list-style-type: none;
     padding: 0;
 }
 
-.contact-info a {
-    color: var(--text-color-contact);
+.contact-me-info-link {
+    color: var(--text-color-default);
+    display: inline-block; 
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 1.25rem;
-    transition: all 0.3s ease; // Smooth transition for hover effects 
-    display: inline-block; // Makes the link behave like a button 
+    transition: all 0.3s ease;
 }
 
-.contact-info ul a:hover {
+.contact-me-info-link:hover {
     color: var(--text-color-link-hover);
     text-decoration: none;
-    transform: translateY(-3px); // Slight upward movement on hover 
+    transform: translateY(-3px); 
     box-shadow: var(--box-shadow-link-hover);
 }
 
 
 // ====== Media query for small to medium laptops and larger tablets ======= 
-
 @media (min-width: 1242px) and (max-width: 1560px) {
     .contact-me {
         padding: 0;
     }
 
-    .button-form1 {
-        width: 30%;
-    }
-
-    .contact-info {
+    .contact-me-info {
         width: 23.125rem;
         height: 23.125rem;
         font-size: 1.125rem;
+        margin: 0 auto; 
     }
 }
 
 
 // ====== Media query for tablets ======= 
-
 @media (min-width: 768px) and (max-width: 1242px) {
+    .contact-header {
+        margin-bottom: 4.125rem;
+    }
+
     .contact-me {
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 0;
+        margin-left: 1.875rem;
     }
 
-    .contact-form {
-        width: 90%;
-        max-width: 31.25rem;
-        padding-top: 1.25rem;
-        padding-left: 0;
+    .contact-me-img {
+        height: 22.375rem;
     }
 
-    .contact-form-label {
-        margin-bottom: 0.125rem;
-        font-weight: 400;
-        font-size: 0.9375rem;
-    }
-
-    input {
-        padding: 0.75rem;
-    }
-
-    textarea {
-        width: 100%;
-        max-width: 25rem;
-    }
-
-    .button-form1 {
-        width: 30%;
-        max-width: 18.75rem;
-        padding: 0.75rem 1.5rem;
-        margin-top: 0.625rem;
-    }
-
-    .contact-info {
-        margin-bottom: 3.75rem;
+    .contact-me-info {
         margin-top: 5.75rem;
-        ;
-        margin-right: 6.875rem;
-        margin-left: 3.125rem;
-        width: 21.875rem;
-        height: 21.875rem;
-        font-size: 1.0625rem;
+        margin-bottom: 3.75rem;
+        margin-left: auto;
+        margin-right: auto; 
     }
 }
 
 // ====== Media query for mobile ======= 
-
 @media (max-width: 767px) {
+    .contact-header {
+        margin-bottom: 2.125rem;
+    }
     .contact-me {
         padding: 0 1.25rem;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
+        margin: auto;
     }
 
-    .contact-form {
-        width: 100%;
-        max-width: auto;
-        padding-top: 0.9375rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .contact-form p,
-    .contact-info p,
-    .contact-info li {
-        font-size: 0.875rem;
-    }
-
-    .contact-form-label {
-        font-size: 0.8125rem;
-    }
-
-    input {
-        padding: 0.625rem;
-        font-size: 0.7125rem;
-        width: 90%;
-    }
-
-    textarea {
-        width: 100%;
-        max-width: 100%;
-        font-size: 0.7125rem;
-    }
-
-    .pristine-error {
-        font-size: 0.7125rem;
-    }
-
-    .button-form1 {
-        width: 40%;
-        margin-top: 0.625rem;
-    }
-
-    .contact-info {
+    .contact-me-portrait {
         margin: 1.875rem auto;
-        width: 17.5rem;
-        height: 17.5rem;
+    }
+
+    .contact-me-img {
+        height: 15.375rem;
+    }
+
+    .contact-me-info {
+        margin: 1.875rem auto;
+        width: 16.5rem;
+        height: 16.5rem;
+        font-size: 0.85rem;
     }
 }

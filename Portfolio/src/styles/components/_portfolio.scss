@@ -1,73 +1,66 @@
 .portfolio {
-    background-color: var(--background-color-portfolio);
-    box-shadow: 0 0 0 40px var(--background-color-portfolio);
-    color: var(--text-color-portfolio);
+    background-color: var(--background-color-sections);
+    box-shadow: 0 0 0 40px var(--background-color-sections);
+    color: var(--text-color-default);
     display: flex;
-    flex-wrap: wrap; // Allows items to wrap onto the next line if they don't fit in one row 
-    justify-content: center;
-    width: 100%;
-    max-width: 100%; // Prevents overflow, ensures content stays within container 
-    padding: 0;
-    padding-bottom: 2.5rem;
-    box-sizing: border-box; // Ensures padding doesn't exceed element's width 
-}
-
-.portfolio h2 {
-    margin-bottom: 1.875rem;
-    margin-top: 0.625rem;
-}
-
-.portfolio article {
-    display: flex;
-    flex-direction: column; // Stacks content vertically 
-    max-width: 25rem;
-    margin: 1.875rem;
-    box-sizing: border-box; // Ensures padding doesn't exceed element's width 
+    flex-direction: column;
+    align-items: center; 
     padding: 1.25rem;
-    text-align: left;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    scroll-margin-top: 7.5rem;
+}
+
+.portfolio-container {
+    display: flex; 
+    flex-wrap: wrap;  
+    justify-content: center;  
+}
+
+.portfolio-project {
+    max-width: 35rem; 
+    margin: 1.875rem;  
+    padding: 2.25rem; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio article:hover {
+.portfolio-project:hover {
     box-shadow: var(--box-shadow-article-hover);
-    transform: scale(1.03); // Enlarges the article on hover 
-    transition: all 0.3s ease; // Smooth transition for the hover effects 
-    background-color: var(--background-color-portfolio-article-hover);
+    background-color: var(--background-color-article-hover);
+    transform: scale(1.03); 
+    transition: all 0.3s ease; 
 }
 
-.portfolio h3 {
+.portfolio-project-title {
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.50rem; 
     margin-bottom: 1.25rem;
     text-align: center;
 }
 
-.portfolio img {
+.portfolio-project-image {
     border-radius: 0.625rem;
     width: 100%;
-    height: 21.875rem;
+    height: 23.875rem; 
 }
 
-.portfolio p {
+.portfolio-project-description {
     margin-top: 1rem;
-    font-size: 1rem;
-}
-
-
-// ====== Media query for tablets ======= 
-
-@media (min-width: 768px) and (max-width: 1242px) {
-    .portfolio h2 {
-        margin-bottom: 1.875rem;
-        margin-top: 0.625rem;
-    }
+    font-size: 1.10rem; 
 }
 
 // ====== Media query for mobile ======= 
-
 @media (max-width: 767px) {
-    .portfolio h2 {
-        margin-bottom: 1.875rem;
-        margin-top: 0.625rem;
+    .portfolio-project-title {
+        font-size: 1.40rem; 
+        margin-bottom: 1.35rem;
+    }
+
+    .portfolio-project-image {
+        height: 20.875rem;
+    }
+        
+    .portfolio-project-description {
+        font-size: 1rem;
     }
 }

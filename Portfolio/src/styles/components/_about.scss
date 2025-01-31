@@ -1,74 +1,70 @@
 .about {
     background-color: var(--background-color-about);
     box-shadow: 0 0 0 80px var(--background-color-about);
-    color: var(--text-color-about);
-    box-sizing: border-box; // Ensures padding doesn't exceed element's width 
-    width: 100%;
-    max-width: 100%; // Prevent overflow 
+    color: var(--text-color-default);
     min-height: 50rem;
     margin-top: 3.125rem;
     padding-left: 2.5rem;
 }
 
-.about-header {
+.main-heading {
+    display: block;
+    text-align: left;
+    width: 50%;
+    margin: 1.25rem;
+    margin-bottom: 2.5rem; 
+    padding-left: 0.9375rem;
     font-size: 3rem;
     font-weight: 500;
-    text-align: left;
-    margin: 1.25rem;
-    padding-left: 0.9375rem;
-    display: block;
-    width: 50%;
 }
 
 .about-me {
-    margin: 1.875rem;
-    height: 34.375rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 1.875rem;
 }
 
 .about-me-information {
     max-width: 50%;
 }
 
-.about-me-information p {
-    margin-top: 2rem;
+.about-me-information-text { 
     font-size: 1.375rem;
     line-height: 1.6;
 }
 
 .button-download {
+    color: var(--text-color-button);
+    background-color: var(--background-color-button);
+    box-shadow: var(--box-shadow-button);
+    border-radius: 2.5rem;
+    border: 1px solid #ccc; 
+    display: inline-block;
+    text-align: center;
     text-decoration: none;
     padding: 1.25rem 2.5rem;
     margin-top: 3.125rem;
     font-weight: 700;
-    color: var(--text-color-button);
-    background-color: var(--background-color-button);
-    display: inline-block;
-    box-shadow: var(--box-shadow-button);
-    border-radius: 2.5rem;
-    border: 1px solid #ccc; 
     font-size: 1.25rem;
-    text-align: center;
     transition: all 0.3s ease;
 }
 
 .button-download:hover {
     background-color: var(--background-color-button-hover);
     box-shadow: var(--box-shadow-button);
-    transform: translateY(-3px); // Slightly lifts the button when hovered 
+    transform: translateY(-3px); 
 }
 
 .button-download:active {
-    transform: translateY(1px); // Gives a pressed effect when the button is clicked 
+    transform: translateY(1px); 
 }
 
 .about-me-portrait {
-    transform: translateX(-6.375rem) translateY(-6.25rem); // Manual positioning 
     border: 3px solid var(--background-color-about);
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(-6.375rem) translateY(-6.25rem); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -78,9 +74,8 @@
 }
 
 // ====== Media query for small to medium laptops and larger tablets ======= 
-
 @media (min-width: 1242px) and (max-width: 1560px) {
-    .about-header {
+    .main-heading {
         font-size: 2.3125rem;
     }
 
@@ -95,16 +90,14 @@
 }
 
 // ====== Media query for tablets ======= 
-
 @media (min-width: 768px) and (max-width: 1242px) {
     .about {
         margin-bottom: 5rem;
     }
 
-    .about-header {
-        font-size: 1.875rem;
-        ;
+    .main-heading {
         text-align: center;
+        font-size: 1.875rem;
         width: 100%;
         padding-left: 0;
         padding-right: 3.125rem;
@@ -114,44 +107,46 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        height: auto;
+        // height: auto;
         margin-top: 0;
     }
 
     .about-me-information {
+        text-align: center;
         max-width: 100%;
         padding: 1.25rem;
         padding-top: 0;
-        text-align: center;
+
     }
 
     .about-me-portrait {
-        transform: translateX(0) translateY(0); // Resets previous translations 
+        transform: translateX(0) translateY(0); 
         margin-top: 2.5rem;
     }
+
 }
 
 // ====== Media query for mobile ======= 
-
 @media (max-width: 767px) {
     .about {
         margin-bottom: 5rem;
-        padding-left: 2.1875rem;
+        margin-top: 2rem;  
+        padding-left: 1.1875rem; 
     }
 
-    .about-header {
-        font-size: 1.55rem;
+    .main-heading {
         text-align: left;
+        font-size: 1.55rem;
         width: 100%;
-        padding-left: 0;
-        padding-right: 1.875rem;
+        padding-left: 0.7rem; 
+        padding-right: 2.875rem; 
     }
 
     .about-me {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        height: auto;
+        // height: auto;
         margin-top: 1.25rem;
     }
 
@@ -161,7 +156,7 @@
         text-align: left;
     }
 
-    .about-me-information p {
+    .about-me-information-text {
         font-size: 1rem;
         margin: 0;
     }
@@ -172,6 +167,6 @@
     }
 
     .about-me-img {
-        height: 21.875rem;
+        height: 17.875rem; 
     }
 }
