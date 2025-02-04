@@ -23,7 +23,7 @@ To run this project locally on your own computer you need to install dependencie
 2. **Clone the repository**:  
    `git clone https://github.com/Hanna282/Portfolio.git`
 
-3. **Install dependencies**: Run the following command to install necessary packages (Vite and Sass):  
+3. **Install dependencies**: Run the following command to install necessary packages:  
    `npm install`
 
 4. **Start the development server**:  
