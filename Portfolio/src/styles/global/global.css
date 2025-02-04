@@ -1,11 +1,11 @@
-@use './_reset';
-@use './_variables' as *;
-
+@import './reset.css';
+@import './variables.css';
 @import url('https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
     scroll-behavior: smooth;
     font-family: 'Hubot Sans', sans-serif;
+    background-color: var(--background-color-header);
 }
 
 main {
@@ -22,7 +22,6 @@ main {
     margin-bottom: 3.125rem;
 }
 
-// ====== Media query for tablets ======= 
 @media (min-width: 768px) and (max-width: 1242px) {
     .section-heading {
         margin-bottom: 1.875rem;
@@ -30,7 +29,6 @@ main {
     }
 }
 
-// ====== Media query for mobile ======= 
 @media (max-width: 767px) {
     .contact-header {
         margin-bottom: 2.125rem;

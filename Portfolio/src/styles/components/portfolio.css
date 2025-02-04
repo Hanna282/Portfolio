@@ -49,7 +49,6 @@
     font-size: 1.10rem; 
 }
 
-// ====== Media query for mobile ======= 
 @media (max-width: 767px) {
     .portfolio-project-title {
         font-size: 1.40rem; 

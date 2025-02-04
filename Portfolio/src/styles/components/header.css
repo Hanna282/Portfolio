@@ -50,7 +50,6 @@
     font-size: 1.275rem;
 }
 
-// ====== Media query for tablets ======= 
 @media (min-width: 768px) and (max-width: 1242px) {
     .header-home {
         padding: 1.25rem;
@@ -95,7 +94,6 @@
     }
 }
 
-// ====== Media query for mobile ======= 
 @media (max-width: 767px) {
     .header-home {
         padding: 1.65rem;

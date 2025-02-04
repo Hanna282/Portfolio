@@ -56,7 +56,6 @@ footer {
     color: var(--text-color-default);
 }
 
-// ====== Media query for mobile ======= 
 @media (max-width: 767px) {
     footer {
         padding: 1.25rem;
