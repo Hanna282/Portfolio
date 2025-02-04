@@ -5,6 +5,9 @@ dist
 dist-ssr
 *.local
 
+# Vite cache
+.vite/
+
 # VS Code settings
 .vscode/
 
@@ -32,6 +35,7 @@ build/
 # Environment files
 .env
 .env.local
+.env.*.local
 
 .sass-cache/
 *.css.map
