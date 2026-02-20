@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --font-standard: 'Inter', system-ui, sans-serif;
+
+    --white-warm: #f8f5f2;
+    --beige-light: #f3efe9;
+    --beige: #eae3d6;
+    --beige-dark: #e0d6cb;
+    --white: #fffffe;
+    --green-teal: #176161;
+    --green-dark: #104747;
+    --green-teal-light: #196868;
+    --grey-light: #ccc;
+    --grey-dark: #232323;
+    --grey-very-light: #f7f3f3;
+
+    --background-color-main: var(--white);
+    --background-color-header: var(--beige-light);
+    --background-color-footer: var(--beige-dark);
+    --background-color-about: var(--beige-light);
+    --background-color-skills: var(--white);
+    --background-color-portfolio: var(--white);
+    --background-color-card: var(--beige-light);
+    --background-color-contact: var(--white);
+    --background-color-sections: var(--white);
+    --background-color-button: var(--green-dark);
+    --background-color-button-hover: var(--green-teal-light);
+    --background-color-link-hover: var(--beige);
+    --background-color-text: var(--white-warm);
+    --background-color-footer-item-hover: var(--beige);
+
+    --text-color: var(--grey-dark);
+    --text-button: var(--grey-very-light);
+    --link-icon-color-hover: var(--green-teal-light);
+    --border-color: var(--grey-light);
+}
+
+/* Dark theme styles */
+[data-theme="dark"] {
+    --black-medium: #232526;
+    --black-dark: #181a1b;
+    --grey-very-light: #f3f3f3;
+    --grey: #7e7e7e;
+    --grey-very-dark: #333;
+    --cyan-dark: #249393;
+    --cyan-very-dark: #176161;
+
+    --background-color-main: var(--black-medium);
+    --background-color-header: var(--black-dark);
+    --background-color-footer: var(--black-dark);
+    --background-color-about: var(--black-dark);
+    --background-color-skills: var(--black-medium);
+    --background-color-portfolio: var(--black-medium);
+    --background-color-card: var(--black-dark);
+    --background-color-contact: var(--black-medium);
+    --background-color-button: var(--cyan-very-dark);
+    --background-color-button-hover: var(--cyan-dark);
+    --background-color-link-hover: var(--grey-very-dark);
+    --background-color-text: var(--black-dark);
+    --background-color-footer-item-hover: var(--grey-very-dark);
+
+    --text-color: var(--grey-light);
+    --text-button: var(--grey-light);
+    --link-icon-color-hover: var(--cyan-dark);
+    --border-color: var(--grey);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+}
+
+body {
+    font-family: var(--font-standard);
+    color: var(--text-color);
+    background-color: var(--background-color-main);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.275rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3.125rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.primary-button {
+    color: var(--text-button);
+    background-color: var(--background-color-button);
+    box-shadow: 1px 1px 1px rgb(37, 28, 28);
+    border-radius: 2.5rem;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.15rem;
+}
+
+.primary-button:hover {
+    background-color: var(--background-color-button-hover);
+    box-shadow: 1px 1px 1px rgb(37, 28, 28);
+    transform: translateY(-3px);
+}
+
+.primary-button:active {
+    transform: translateY(1px);
+}
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 1.40rem;
+    }
+}
+
+/* Mobile  */
+@media (max-width: 767px) {
+    main {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .primary-button {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+    }
+}

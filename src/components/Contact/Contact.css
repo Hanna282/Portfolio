@@ -1,0 +1,134 @@
+.contact {
+    background-color: var(--background-color-contact);
+    box-shadow: 0 0 0 60px var(--background-color-contact);
+    color: var(--text-color);
+    margin-bottom: 7.75rem;
+    scroll-margin-top: 8.5rem;
+    padding: 3rem 1.25rem 4rem;
+}
+
+.contact-me {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro {
+    line-height: 1.6;
+    margin: 0 auto 2rem auto;
+    max-width: 520px;
+    color: var(--text-color);
+}
+
+.contact-info {
+    font-style: normal;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color-text);
+    max-width: 440px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1.2rem;
+}
+
+.contact-text {
+    margin-bottom: 1.25rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.contact-link:hover {
+    border-color: var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link .bx {
+    font-size: 1.35rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact {
+        margin-top: 3rem;
+    }
+
+    .contact-me {
+        padding: 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-intro {
+        margin-bottom: 1.5rem;
+        max-width: 400px;
+    }
+
+    .contact-info {
+        padding: 2rem 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+        gap: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .contact-list {
+        gap: 0.75rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .contact {
+        padding: 1.5rem 1rem 2.5rem;
+        scroll-margin-top: 7rem;
+        margin-top: 1.5rem;
+    }
+
+    .contact h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-me {
+        padding: 0 1.25rem;
+        margin: auto;
+    }
+
+    .contact-info {
+        padding: 1.7rem 0.7rem;
+        margin: 2rem auto;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 320px;
+        gap: 1rem;
+    }
+
+    .contact-link .bx {
+        font-size: 1.1rem;
+    }
+}

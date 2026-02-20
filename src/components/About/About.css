@@ -1,0 +1,240 @@
+.about {
+    background-color: var(--background-color-about);
+    box-shadow: 0 0 0 80px var(--background-color-about);
+    color: var(--text-color);
+    min-height: 50rem;
+    margin-top: 3.125rem;
+    padding-left: 2.5rem;
+
+    scroll-margin-top: 7rem;
+}
+
+.about-heading {
+    display: block;
+    width: 50%;
+    margin: 1.25rem;
+    padding-left: 0.5rem;
+}
+
+.about-me {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1.875rem;
+    gap: clamp(6rem, 8vw, 9rem);
+}
+
+.about-me-info {
+    min-width: 320px;
+    max-width: 65ch;
+}
+
+.about-me-info p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.button-download {
+    padding: 1.1rem 2rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+}
+
+.about-me-portrait {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18), 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: none;
+    flex: 0 0 auto;
+    width: clamp(280px, 28vw, 420px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -5rem;
+}
+
+.about-me-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Large desktop */
+@media (min-width: 1800px) {
+    .about-heading {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    .about-me-info {
+        order: 2;
+        text-align: center;
+    }
+
+    .about-me-portrait {
+        order: 1;
+        margin-top: 0;
+    }
+
+    .about-me-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Small desktop / big tablet */
+@media (min-width: 1026px) and (max-width: 1347px) {
+    .about {
+        min-height: 60rem;
+    }
+
+    .about-heading {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-info {
+        order: 2;
+        text-align: center;
+    }
+
+    .about-me-portrait {
+        order: 1;
+        width: 220px;
+        height: 220px;
+        margin-top: 0;
+    }
+
+    .about-me-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .button-download {
+        margin-top: 1rem;
+    }
+}
+
+/* Tablet  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about {
+        margin-bottom: 5rem;
+        min-height: 45rem;
+    }
+
+    .about-heading {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 2rem;
+        margin: 1rem 0 2.5rem 0;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .about-me-info {
+        text-align: center;
+        max-width: 100%;
+        padding: 1.25rem;
+        padding-top: 0;
+        order: 2;
+    }
+
+    .about-me-info p {
+        font-size: 1.1rem;
+    }
+
+    .about-me-portrait {
+        order: 1;
+        transform: none !important;
+        width: 220px;
+        height: 220px;
+        border-width: 2px;
+        margin-top: 0;
+    }
+
+    .about-me-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .button-download {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .about {
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+        padding-left: 1.1875rem;
+    }
+
+    .about-heading {
+        text-align: center;
+        width: 100%;
+        margin: 0.5rem 0 1.2rem 0;
+        padding: 0;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.25rem;
+        gap: 1rem;
+    }
+
+    .about-me-info {
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+        order: 2;
+    }
+
+    .about-me-info p {
+        font-size: 0.98rem;
+        margin: 1rem 0.4rem 1rem 0.4rem;
+    }
+
+    .primary-button.button-download {
+        margin-top: 0.2rem;
+    }
+
+    .about-me-portrait {
+        order: 1;
+        margin-bottom: 0.8rem;
+        transform: none !important;
+        width: 140px;
+        height: 140px;
+        border-width: 2px;
+        margin-top: 0;
+    }
+
+    .about-me-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
