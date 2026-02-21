@@ -21,7 +21,7 @@ const About = () => {
                     className="primary-button button-download"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://drive.google.com/file/d/1cwghQVMHgAuzluJCH_Y1WZqW27Q-0tSn"
+                    href="https://drive.google.com/file/d/1nkRcT-3reziALJfotrC4SVE1QlhKM00s"
                     >
                         Download my CV
                     </a>
