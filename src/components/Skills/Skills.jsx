@@ -15,7 +15,7 @@ const Skills = () => {
 
     'REST API',
     'gRPC',
-    'JWT Authentication',
+    'JWT Auth',
 
     'Testing (Unit/Integration)',
     'CI/CD pipelines',

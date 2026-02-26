@@ -17,14 +17,6 @@ const About = () => {
                         I value collaboration and clear communication,
                         and I'm always eager to learn and grow as a developer.
                     </p>
-                    <a
-                    className="primary-button button-download"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://drive.google.com/file/d/1nkRcT-3reziALJfotrC4SVE1QlhKM00s"
-                    >
-                        Download my CV
-                    </a>
                 </div>
                 <div className="about-me-portrait">
                     <img className="about-me-image" src="images/portrait.jpg" alt="Portrait of Hanna" loading="lazy" />

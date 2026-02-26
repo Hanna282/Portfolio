@@ -35,12 +35,6 @@
     margin-bottom: 1.2rem;
 }
 
-.button-download {
-    padding: 1.1rem 2rem;
-    font-weight: 700;
-    margin-top: 2.5rem;
-}
-
 .about-me-portrait {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18), 0 12px 40px rgba(0, 0, 0, 0.12);
     transform: none;
@@ -123,10 +117,6 @@
         height: 100%;
         object-fit: cover;
     }
-
-    .button-download {
-        margin-top: 1rem;
-    }
 }
 
 /* Tablet  */
@@ -176,12 +166,6 @@
         width: 100%;
         object-fit: cover;
     }
-
-    .button-download {
-        font-size: 1.1rem;
-        padding: 1rem 2rem;
-        margin-top: 1rem;
-    }
 }
 
 /* Mobile */
@@ -216,10 +200,6 @@
     .about-me-info p {
         font-size: 0.98rem;
         margin: 1rem 0.4rem 1rem 0.4rem;
-    }
-
-    .primary-button.button-download {
-        margin-top: 0.2rem;
     }
 
     .about-me-portrait {
