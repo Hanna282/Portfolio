@@ -1,6 +1,6 @@
 # Developer Portfolio Website
 
-A modern and responsive personal developer portfolio built using React and Vite. Designed to showcases skills, projects and contact information.
+A modern and responsive personal developer portfolio built using React and Vite. Designed to showcase skills, projects and contact information.
 
 ## 🌐 Live Portfolio
 [www.hannamickels.com](https://www.hannamickels.com/)
